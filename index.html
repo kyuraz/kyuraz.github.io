@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/dewe.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=McLaren&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+    <link rel='stylesheet' href='fa/css/all.min.css'>
+
+    <link rel="shortcut icon" type="image/png" href="img/love.png">
+     <script src="js/jquery-3.1.1.min.js"></script>
+    
+     <title>Frinight</title>
+      
+  </head>
+  <body class="background ">
+<div class="pre-loader">
+  <div class="sk-fading-circle">
+    <div class="sk-circle1 sk-circle"></div>
+    <div class="sk-circle2 sk-circle"></div>
+    <div class="sk-circle3 sk-circle"></div>
+    <div class="sk-circle4 sk-circle"></div>
+    <div class="sk-circle5 sk-circle"></div>
+    <div class="sk-circle6 sk-circle"></div>
+    <div class="sk-circle7 sk-circle"></div>
+    <div class="sk-circle8 sk-circle"></div>
+    <div class="sk-circle9 sk-circle"></div>
+    <div class="sk-circle10 sk-circle"></div>
+    <div class="sk-circle11 sk-circle"></div>
+    <div class="sk-circle12 sk-circle"></div>
+  </div>
+</div>
+    
+    
+
+  
+
+
+   <center>
+<script type="text/javascript">
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+ if(this.running) return;
+ if(typeof this.origText == "undefined") {
+   setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+   return;
+ }
+ if(this.currentText == "") this.element.innerHTML = "";
+ if(this.currentChar < this.origText.length) {
+   if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+     this.tagBuffer = "<";
+     this.inTag = true;
+     this.currentChar++;
+     this.run();
+     return;
+   } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+     this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+     this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+     this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+   this.currentChar++;
+   setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+ } else {
+        this.currentText = "";
+        this.currentChar = 0;
+       this.running = false;
+       this.finishedCallback();
+ }
+}
+</script>
+<div style="display:none">
+   <audio src="aud/bensound.mp3" controls autoplay loop   > </audio> 
+</div>
+
+<div class="animasi-teksin">Sugeng Dalu</div>
+<p class="animated pulse infinite " style="color: pink;">-Dear Gita-<br></p>
+<!-- Trigger the Modal -->
+
+<img id="myImg" src="img/nagita.jpg" class="img-fluid animated fadeInUpBig mb-4 rounded-circle bord" alt="Nona Gita" style="width:100%;max-width: 200px;">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+
+
+
+
+
+
+
+
+
+<p class="animated fadeInRightBig " style="color:white ;">~Rimbunan Kasih~<i class="fas fa-grin-squint-tears animated jackInTheBox infinite"></i></p>
+
+<p id="message"><font>
+"Deras tetes air menyapa<br>
+Mengusik rasa<br>
+Sampaikanlah semua<br>
+<br>
+Kerumunan emosi<br>
+Mencabut duri<br>
+Mengukir emoji cinta di hati<br>
+<br>
+Seperti bius<br>
+Membawaku terbang<br>
+Relapun mati<br> 
+<br>
+Maafkan jika kusimpan rasa<br>
+Aku memang tak sama<br>
+Biarkan embun yang membisikkannya<br> 
+<br>
+Rasakan semua pahit manis yang kau dera<br>
+Semua duka dan tawa<br>
+Damailah bersamaku<br> 
+Gita..."<br><br>
+
+
+
+
+</font>
+
+
+</p>
+<button class="btn btn-outline-light animated shake infinite mb-5" onclick="kuker()"><i class="fab fa-angellist"></i>Klik aku</button>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+new TypingText(document.getElementById("message"), 90, function(i){ var ar = new Array("\\", "|", "/", "-"); return " " + ar[i.length % ar.length]; });
+//Type out examples:
+TypingText.runAll();
+
+ </script>
+ <script type="text/javascript">
+   var modal = document.getElementById("myModal");
+
+
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+
+ </script>
+ <script type="text/javascript">function kuker (){
+swal("Terimakasih", "Semoga hubungan kita harmonis!", "success",);
+
+}</script>
+<script type="text/javascript">
+(function($){
+  'use strict';
+    $(window).on('load', function () {
+        if ($(".pre-loader").length > 0)
+        {
+            $(".pre-loader").fadeOut("slow");
+        }
+    });
+})(jQuery)
+</script>
+
+
+
+    <!-- Optional JavaScript
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+
+
+  </body>
+ 
+</html>
